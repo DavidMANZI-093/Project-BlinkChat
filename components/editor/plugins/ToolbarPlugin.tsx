@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
+import { Button } from '@/components/ui/button';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import { mergeRegister } from '@lexical/utils';
 import {
@@ -145,7 +146,7 @@ export default function ToolbarPlugin() {
         <i className="format redo" />
       </button>
       <Divider />
-      <button
+      <Button // changed from button
         onClick={() => editor.update(() => toggleBlock('h1'))}
         data-active={activeBlock === 'h1' ? '' : undefined}
         className={
@@ -153,8 +154,8 @@ export default function ToolbarPlugin() {
         }
       >
         <i className="format h1" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => editor.update(() => toggleBlock('h2'))}
         data-active={activeBlock === 'h2' ? '' : undefined}
         className={
@@ -162,8 +163,8 @@ export default function ToolbarPlugin() {
         }
       >
         <i className="format h2" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => editor.update(() => toggleBlock('h3'))}
         data-active={activeBlock === 'h3' ? '' : undefined}
         className={
@@ -171,9 +172,9 @@ export default function ToolbarPlugin() {
         }
       >
         <i className="format h3" />
-      </button>
+      </Button>
       <Divider />
-      <button
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'bold');
         }}
@@ -181,8 +182,8 @@ export default function ToolbarPlugin() {
         aria-label="Format Bold"
       >
         <i className="format bold" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'italic');
         }}
@@ -190,8 +191,8 @@ export default function ToolbarPlugin() {
         aria-label="Format Italics"
       >
         <i className="format italic" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'underline');
         }}
@@ -199,8 +200,8 @@ export default function ToolbarPlugin() {
         aria-label="Format Underline"
       >
         <i className="format underline" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'strikethrough');
         }}
@@ -208,9 +209,9 @@ export default function ToolbarPlugin() {
         aria-label="Format Strikethrough"
       >
         <i className="format strikethrough" />
-      </button>
+      </Button>
       <Divider />
-      <button
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'left');
         }}
@@ -218,8 +219,8 @@ export default function ToolbarPlugin() {
         aria-label="Left Align"
       >
         <i className="format left-align" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'center');
         }}
@@ -227,8 +228,8 @@ export default function ToolbarPlugin() {
         aria-label="Center Align"
       >
         <i className="format center-align" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'right');
         }}
@@ -236,8 +237,8 @@ export default function ToolbarPlugin() {
         aria-label="Right Align"
       >
         <i className="format right-align" />
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'justify');
         }}
@@ -245,7 +246,7 @@ export default function ToolbarPlugin() {
         aria-label="Justify Align"
       >
         <i className="format justify-align" />
-      </button>{' '}
+      </Button>{' '}
     </div>
   );
 }
